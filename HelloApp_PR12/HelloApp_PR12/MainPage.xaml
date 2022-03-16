@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PR12.MainPage">
+    <RelativeLayout>
+        <Button x:Name="lbl" Text="Числа Фибоначчи" 
+                BackgroundColor="#81D55B"
+                 RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=10}"
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=10}"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=Constant, Constant=300}"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=Constant, Constant=40}"
+                Clicked="Fib"/>
+        <Grid x:Name="myGrid" BackgroundColor="#FCDC4A" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" 
+              RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToView, ElementName=lbl, Property=X, Factor=1, Constant=10}" 
+              RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToView, ElementName=lbl, Property=Y, Factor=1, Constant=50}" 
+              RelativeLayout.WidthConstraint = "280" 
+              RelativeLayout.HeightConstraint = "500">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+        </Grid>
+    </RelativeLayout>
+
+</ContentPage>
